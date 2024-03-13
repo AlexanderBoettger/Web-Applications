@@ -1,13 +1,13 @@
-package ee.mainor.demo;
+package com.web_applications.Blog_Project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class BlogProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(BlogProjectApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package ee.mainor.demo;
+package com.web_applications.Blog_Project;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class BlogProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
