@@ -28,11 +28,23 @@ public class PostService {
         return result.orElseThrow(() -> new RuntimeException("Post not found for id: " + id));
     }
 
-    public void savePost(Post post) {
-        postRepository.save(post);
-    }
+   public Post savePost(Post post) {
+    return postRepository.save(post);
+}
 
     public void deletePostById(Long id) {
         postRepository.deleteById(id);
     }
+
+    public Post updatePost(Long id, Post postDetails) {
+        return postRepository.findById(id)
+            .map(existingPost -> {
+                existingPost.setTitle(postDetails.getTitle());
+                existingPost.setContent(postDetails.getContent());
+                // Set any other properties that need to be updated
+                return postRepository.save(existingPost);
+            })
+            .orElseThrow(() -> new RuntimeException("Post not found for id: " + id));
+    }
+    
 }
