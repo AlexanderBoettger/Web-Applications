@@ -22,14 +22,14 @@ public class PostRestController {
     }
 
     // Erstellen eines neuen Posts
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
         Post newPost = postService.savePost(post);
         return new ResponseEntity<>(newPost, HttpStatus.CREATED);
     }
 
     // Abrufen aller Posts
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<Post>> getAllPosts() {
         List<Post> posts = postService.findAllPosts();
         return new ResponseEntity<>(posts, HttpStatus.OK);
