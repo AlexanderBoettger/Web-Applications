@@ -27,3 +27,13 @@ and engage with the content provided by the bloggers.
 User Story: Comment on Blog Posts
 As a reader, I want to leave comments on blog posts so that I can engage with the content, 
 provide feedback to the blogger, ask questions, or participate in discussions with other readers.
+
+
+
+
+
+Start the backend:
+switch to \Blog_Project> and start the backend with: ./gradlew bootRun
+
+Start the frontend:
+switch to \blog_project_frontend and start frontend with: npm start 
