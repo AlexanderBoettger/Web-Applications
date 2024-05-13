@@ -15,7 +15,7 @@ const PostList = () => {
         const response = await axios.get('/api/posts');
         setPosts(response.data);
       } catch (error) {
-        console.error('Fehler beim Abrufen der Posts', error);
+        console.error('Error while opening the post', error);
       }
     };
 

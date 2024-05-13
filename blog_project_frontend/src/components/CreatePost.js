@@ -13,7 +13,7 @@ const CreatePost = ({ onPostCreated }) => {
       const response = await axios.post('/api/posts', { title, content });
       onPostCreated(response.data); // Callback-Funktion, um den Parent-Component zu informieren
     } catch (error) {
-      console.error('Fehler beim Erstellen des Posts', error);
+      console.error('Error while creating the Post', error);
     }
   };
 
@@ -24,16 +24,16 @@ const CreatePost = ({ onPostCreated }) => {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Titel des Posts"
+          placeholder="Title of the Posts"
           required
         />
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          placeholder="Inhalt des Posts"
+          placeholder="write your Posts"
           required
         />
-        <button type="submit">Post erstellen</button>
+        <button type="submit">Create Post</button>
       </form>
     </div>
   );

@@ -7,7 +7,7 @@ const Post = ({ post, onDeleteSuccess, onEditClick }) => {
       await axios.delete(`/api/posts/${post.id}`);
       onDeleteSuccess(post.id);
     } catch (error) {
-      console.error('Fehler beim Löschen des Posts', error);
+      console.error('Error while deleting post', error);
     }
   };
 
