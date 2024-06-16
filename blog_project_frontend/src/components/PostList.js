@@ -33,8 +33,8 @@ const PostList = () => {
 
 
   const handleEditClick = (post) => {
-    setEditPost(post); // Setzen des zu bearbeitenden Posts
-    setCreating(false); // Deaktiviert den Erstellungsmodus
+    setEditPost(post);
+    setCreating(false);
   };
 
     // Funktion zum Aktualisieren eines Posts
@@ -43,7 +43,7 @@ const PostList = () => {
           p.id === updatedPost.id ? updatedPost : p
         );
         setPosts(updatedPosts);
-        setEditPost(null); // Bearbeitungsmodus deaktivieren
+        setEditPost(null);
       };
 
       return (
